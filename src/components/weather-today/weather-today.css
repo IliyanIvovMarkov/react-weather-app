@@ -1,0 +1,20 @@
+.weather-today-container {
+    display: flex;
+    flex-direction: row;
+}
+.weather-today-numbers-container {
+    display: flex;
+    flex-direction: column;
+}
+.weather-today-cur-temp {
+    font-size: 36px;
+    text-align: left;
+}
+.weather-today-other {
+    font-size: 24px;
+    text-align: left;
+}
+.weather-today-descr-container {
+    width: 50%;
+    display: flex;
+}
