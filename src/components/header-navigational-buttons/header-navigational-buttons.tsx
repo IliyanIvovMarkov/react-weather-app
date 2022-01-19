@@ -1,25 +1,26 @@
 import './header-navigational-buttons.css'
 import React from 'react';
 
-let myClass = 'not-active-nav-btns';
-//let inputValue: string = (document.getElementById("cityName") as HTMLInputElement).value;
 
-export const HeaderNavigationalButtons = () => {
+export const HeaderNavigationalButtons = (props: any) => {
 
-    /*if (inputValue !== "") {
-        myClass = 'active-nav-btns'
+  const changeClassName = (): string => {
+
+    if(props.city === "") {
+      return 'not-active-nav-btns'
     } else {
-        myClass = 'not-active-nav-btns'
-    }*/
+      return 'active-nav-btns'
+    }
+  };
 
-    return (
-        <>
-            <a className={'active-nav-btns'} href='/weather-today'>
-                One Day
-            </a>
-            <a className={'active-nav-btns'} href='/weather-five-days'>
-                Five Days
-            </a>
-        </>
-    )
+  return (
+    <>
+      <a className={changeClassName()} href='/weather-today'>
+        One Day
+      </a>
+      <a className={changeClassName()} href='/weather-five-days'>
+        Five Days
+      </a>
+    </>
+  )
 }
