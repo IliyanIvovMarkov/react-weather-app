@@ -1,10 +1,16 @@
 import React from 'react';
+import {DayForecast} from "../day-forecast/day-forecast";
 
-export const WeatherFiveDays = () => {
+
+export const WeatherFiveDays = (props: any) => {
     
     return (
         <>
-            <h2>Weather in five days</h2>
+          <DayForecast/>
+          <DayForecast/>
+          <DayForecast/>
+          <DayForecast/>
+          <DayForecast/>
         </>
     )
 }
