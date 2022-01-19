@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './weather-today.css'
 
 export const WeatherToday = (props: any) => {
-    /*async function getData() {
-      let urlToday = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${props.apiKey}`;
-      let temp: any = await fetch(urlToday).then(response => response.json()).then(data => console.log(data)).catch((error) => {
-        console.error('Error:', error);
-        return temp.main.temp;
-      });*/
+
   const [dayData, setDayData ] = useState({
     weather: [
       {

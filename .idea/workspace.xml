@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07405cf-dc92-40e0-866a-238cbd63ec2c" name="Changes" comment="" />
+    <list default="true" id="5616e26f-9ab5-48ab-9775-9ca944c91a7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header-navigational-buttons/header-navigational-buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-navigational-buttons/header-navigational-buttons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/weather-details/weather-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-details/weather-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/weather-today/weather-today.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-today/weather-today.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/initialize" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,6 +35,7 @@
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
