@@ -1,0 +1,21 @@
+.active-nav-btns {
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 10px 5px 0px;
+    transition-duration: 0.5s;
+    border: 2px solid #5c56b3;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.active-nav-btns:hover {
+    color: white;
+    background-color: #5c56b3;
+}
+.not-active-nav-btns {
+    visibility: hidden;
+}
