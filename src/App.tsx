@@ -13,15 +13,19 @@ function App() {
   const onSearch = (searchValue: string) => {
     setCity(searchValue)
   }
-
+  const displayCity = (theCity: string) => {
+    theCity = city
+    return theCity
+  }
   return (
       <div className="App container">
         <Header
-          city={city}
           onSearch={onSearch}
+          city={city}
         />
         <WeatherDetails
           city={city}
+          displayCity={displayCity}
         />
       </div>
   );
