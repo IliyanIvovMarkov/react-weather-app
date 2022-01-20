@@ -1,5 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+
+import './weather-details.css';
 import {WeatherToday} from "../weather-today/weather-today";
 import {WeatherFiveDays} from "../weather-five-days/weather-five-days";
 
@@ -7,7 +9,7 @@ export const WeatherDetails = (props: any) => {
 
   return (
     <>
-      <div className="container">
+      <div className="container details-container">
         <BrowserRouter>
           <Switch>
             <Route exact path='/weather-today'>
