@@ -5,16 +5,28 @@
 .weather-today-numbers-container {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 .weather-today-cur-temp {
+    margin: 10px 0;
     font-size: 36px;
     text-align: left;
 }
 .weather-today-other {
+    margin: 10px 0;
     font-size: 24px;
     text-align: left;
 }
-.weather-today-descr-container {
+.weather-today-icon-container {
     width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-today-icon {
+    height: 170px;
+}
+.weather-is-loading {
+    position: relative;
+    font-size: xxx-large;
 }
