@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5616e26f-9ab5-48ab-9775-9ca944c91a7f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +76,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/weather-code-clean-up" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
