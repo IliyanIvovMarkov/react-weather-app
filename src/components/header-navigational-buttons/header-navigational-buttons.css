@@ -17,5 +17,17 @@
     background-color: #5c56b3;
 }
 .not-active-nav-btns {
-    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 10px 5px 0px;
+    transition-duration: 0.5s;
+    border: 2px solid darkgrey;
+    color: darkgrey;
+    border-radius: 8px;
+    //visibility: hidden;
 }

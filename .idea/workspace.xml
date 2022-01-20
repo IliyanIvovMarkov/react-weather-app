@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07405cf-dc92-40e0-866a-238cbd63ec2c" name="Changes" comment="" />
+    <list default="true" id="5616e26f-9ab5-48ab-9775-9ca944c91a7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/day-forecast/day-forecast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/weather-five-days/weather-five-days.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/initialize" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,6 +34,7 @@
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -38,13 +46,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\Front-end Developer\WebStorm 2021.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\AllFront\react-weather-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b07405cf-dc92-40e0-866a-238cbd63ec2c" name="Changes" comment="" />
+      <changelist id="5616e26f-9ab5-48ab-9775-9ca944c91a7f" name="Changes" comment="" />
       <created>1642081700456</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -52,7 +60,16 @@
       <workItem from="1642081701892" duration="2868000" />
       <workItem from="1642086365200" duration="139000" />
       <workItem from="1642143769297" duration="145000" />
+      <workItem from="1642662137771" duration="11335000" />
     </task>
+    <task id="LOCAL-00001" summary="Add weather-five-day API">
+      <created>1642604979594</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642604979594</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +85,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add weather-five-day API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add weather-five-day API" />
   </component>
 </project>
