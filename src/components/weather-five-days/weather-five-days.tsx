@@ -2,16 +2,18 @@ import React, {useEffect, useState} from 'react';
 
 import './weather-five-days.css';
 import {DayForecast} from "../day-forecast/day-forecast";
+import FiveDaysApiModel from "../../models/five-days-api.model";
+import PropsModel from "../../models/props.model";
 
 const today = new Date();
 const getExactDate = (num: number) => (today.getDate() + num)+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
 
-const getTemp = (tempList: any) => {
+const getTemp = (tempList: any[]) => {
   return (tempList.reduce((prevValue: number, curValue: number) => prevValue + curValue) / 5).toFixed();
 };
 
-const mapApiData = (apiData: any) => {
-  let listOfTemp = apiData.list.map((everyThreeHourData: any) => Number(everyThreeHourData.main.temp.toFixed()));
+const mapApiData = (apiData: { list: any[]; }): FiveDaysApiModel => {
+  let listOfTemp = apiData.list.map((everyThreeHourData) => Number(everyThreeHourData.main.temp.toFixed()));
 
   return {
     day: {
@@ -38,12 +40,12 @@ const mapApiData = (apiData: any) => {
   };
 };
 
-export const WeatherFiveDays = (props: any) => {
-  const  [fiveDayData, setFiveDayData]: any   = useState(null)
-  const  [isLoading, setIsLoading]: any   = useState(true)
+export const WeatherFiveDays = ({city, apiKey}: PropsModel) => {
+  const  [fiveDayData, setFiveDayData]: any[]   = useState(null)
+  const  [isLoading, setIsLoading]: any[]  = useState(true)
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&units=metric&appid=${props.apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`)
       .then(response => response.json())
       .then(mapApiData)
       .then(data => {

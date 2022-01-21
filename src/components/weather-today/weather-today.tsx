@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './weather-today.css'
 
-export const WeatherToday = (props: any) => {
-  const [isLoading, setIsLoading]: any = useState(true)
-  const [dayData, setDayData]: any = useState(null)
+export const WeatherToday = (props: { city: string; apiKey: string; }) => {
+  const [isLoading, setIsLoading]: boolean | any = useState(true)
+  const [dayData, setDayData]: null | any = useState(null)
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${props.apiKey}`)
