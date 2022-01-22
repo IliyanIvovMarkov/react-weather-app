@@ -6,6 +6,7 @@ import EveryComponentsProps from "../../models/every-components-props";
 
 export const Header = ({city, onSearch}: EveryComponentsProps) =>
   <header className='header-container'>
+
     <HeaderNavigationalButtons
       city={city}
     />

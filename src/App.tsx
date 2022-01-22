@@ -8,7 +8,7 @@ function App() {
   const apiKey = 'e316f8024bffa51bf25f2009765e67b5';
   const [city, setCity] = useState<string>('');
 
-  const onSearch = (searchValue: string): any => {
+  const onSearch = (searchValue: string)  => {
     setCity(searchValue);
   };
 
