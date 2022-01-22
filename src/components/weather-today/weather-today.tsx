@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import './weather-today.css'
+import EveryComponentsProps from "../../models/every-components-props";
+import TodayDataResponse from "../../models/today-data-response";
 
-export const WeatherToday = (props: { city: string; apiKey: string; }) => {
-  const [isLoading, setIsLoading]: boolean | any = useState(true)
-  const [dayData, setDayData]: null | any = useState(null)
+
+export const WeatherToday = ({city, apiKey}: EveryComponentsProps) => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [dayData, setDayData] = useState(null as TodayDataResponse | null)
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${props.apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
       .then(response => response.json())
       .then((data) => {
         setDayData(data)

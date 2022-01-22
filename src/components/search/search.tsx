@@ -1,10 +1,21 @@
 import './search.css';
 import React from 'react';
-import PropsModel from "../../models/props.model";
+import EveryComponentsProps from "../../models/every-components-props";
 
-export const Search = ({onSearch}: PropsModel) => {
+/*
+interface SearchGetValueResponse {
+  event: {
+    charCode: number;
+    target: {
+      value: string;
+    };
+  }
+}
+*/
 
-  const getValue = (event: any) => {
+export const Search = ({onSearch}: EveryComponentsProps) => {
+
+  const getValue = (event: any ) => {
     if (event.charCode === 13 && onSearch) {
       onSearch(event.target.value);
     }

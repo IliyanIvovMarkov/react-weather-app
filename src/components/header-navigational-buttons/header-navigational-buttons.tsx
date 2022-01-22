@@ -1,6 +1,6 @@
 import './header-navigational-buttons.css'
 import React from 'react';
-import PropsModel from "../../models/props.model";
+import EveryComponentsProps from "../../models/every-components-props";
 
 const changeClassName = (cityName: string): string => {
 
@@ -11,7 +11,7 @@ const changeClassName = (cityName: string): string => {
   }
 };
 
-export const HeaderNavigationalButtons = ({city}: PropsModel) => {
+export const HeaderNavigationalButtons = ({city}: EveryComponentsProps) => {
 
   return (
     <>

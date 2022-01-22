@@ -1,4 +1,4 @@
-export default interface PropsModel {
+export default interface EveryComponentsProps {
   city: string
   apiKey?: string
   onSearch?: (arg: string) => string
