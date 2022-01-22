@@ -1,25 +1,9 @@
 import './search.css';
-import React from 'react';
+import React, {useState} from 'react';
 import EveryComponentsProps from "../../models/every-components-props";
 
-/*
-interface SearchGetValueResponse {
-  event: {
-    charCode: number;
-    target: {
-      value: string;
-    };
-  }
-}
-*/
-
 export const Search = ({onSearch}: EveryComponentsProps) => {
-
-  const getValue = (event: any ) => {
-    if (event.charCode === 13 && onSearch) {
-      onSearch(event.target.value);
-    }
-  };
+  const [input, setInput] = useState('')
 
   return (
     <>
@@ -28,7 +12,14 @@ export const Search = ({onSearch}: EveryComponentsProps) => {
         id="cityName"
         name="cityName"
         className='search-input'
-        onKeyPress={getValue}
+        onChange={event => {
+          setInput(event.target.value)
+        }}
+        onKeyPress={(event) => {
+          if(event.key === "Enter" && onSearch) {
+            onSearch(input);
+          }
+        }}
       />
     </>
   )
