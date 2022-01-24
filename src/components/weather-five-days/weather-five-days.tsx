@@ -6,6 +6,10 @@ import FiveDaysApiModel from "../../models/five-days-api.model";
 import EveryComponentsProps from "../../models/every-components-props";
 import FiveDayResponse from '../../models/five-day-response'
 
+const apiKey = 'e316f8024bffa51bf25f2009765e67b5';
+const getFiveDaysAPI = (city: string) =>
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
+
 const today = new Date();
 const getExactDate = (num: number) => (today.getDate() + num)+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
 
@@ -41,19 +45,19 @@ const mapApiData = (apiData: { list: FiveDayResponse[]; }): FiveDaysApiModel => 
   };
 };
 
-export const WeatherFiveDays = ({city, apiKey}: EveryComponentsProps) => {
+export const WeatherFiveDays: React.FC<EveryComponentsProps> = ({city}) => {
   const  [fiveDayData, setFiveDayData]   = useState(null as FiveDaysApiModel | null)
   const  [isLoading, setIsLoading]  = useState(true)
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`)
-      .then(response => response.json())
-      .then(mapApiData)
-      .then(data => {
-        setFiveDayData(data)
-        setIsLoading(false)
-      })
-  }, []);
+    getFiveDaysAPI(city)
+        .then(response => response.json())
+        .then(mapApiData)
+        .then(data => {
+          setFiveDayData(data)
+          setIsLoading(false)
+        })
+  }, [city]);
 
   return (
     <>

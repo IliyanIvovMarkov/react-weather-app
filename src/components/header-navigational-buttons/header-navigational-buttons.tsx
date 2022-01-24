@@ -1,6 +1,7 @@
 import './header-navigational-buttons.css'
 import React from 'react';
 import EveryComponentsProps from "../../models/every-components-props";
+import {Link, Outlet} from "react-router-dom";
 
 const changeClassName = (cityName: string): string => {
 
@@ -11,16 +12,18 @@ const changeClassName = (cityName: string): string => {
   }
 };
 
-export const HeaderNavigationalButtons = ({city}: EveryComponentsProps) => {
-
+export const HeaderNavigationalButtons: React.FC<EveryComponentsProps> = ({city}) => {
   return (
     <>
-      <a className={changeClassName(city)} href={`/weather-today/${city}`}>
+    <nav>
+      <Link className={changeClassName(city)} to={`/weather-today/${city}`}>
         One Day
-      </a>
-      <a className={changeClassName(city)} href={`/weather-five-days/${city}`}>
+      </Link>
+      <Link className={changeClassName(city)} to={`/weather-five-days/${city}`}>
         Five Days
-      </a>
+      </Link>
+    </nav>
+      <Outlet/>
     </>
   )
 }

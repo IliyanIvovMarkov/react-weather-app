@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 
 import './App.css';
 import {Header} from './components/header/header';
 import {WeatherDetails} from "./components/weather-details/weather-details";
 
+
 function App() {
-  const apiKey = 'e316f8024bffa51bf25f2009765e67b5';
   const [city, setCity] = useState<string>('');
 
   const onSearch = (searchValue: string)  => {
+    window.history.replaceState(null, searchValue, '/weather-today/'+ searchValue)
     setCity(searchValue);
   };
 
@@ -20,7 +21,6 @@ function App() {
       />
       <WeatherDetails
         city={city}
-        apiKey={apiKey}
       />
     </div>
   );

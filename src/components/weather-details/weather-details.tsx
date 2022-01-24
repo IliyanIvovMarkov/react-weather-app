@@ -1,32 +1,28 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 
 import './weather-details.css';
 import {WeatherToday} from "../weather-today/weather-today";
 import {WeatherFiveDays} from "../weather-five-days/weather-five-days";
 import EveryComponentsProps from "../../models/every-components-props";
 
-export const WeatherDetails= ({city, apiKey}: EveryComponentsProps) => {
+export const WeatherDetails: React.FC<EveryComponentsProps> = ({city}) => {
 
   return (
     <>
       <div className="container details-container">
-        <BrowserRouter>
-          <Switch>
-            <Route exact path={`/weather-today/${city}`}>
+          <Routes>
+            <Route path={`/weather-today/:city`} element={
               <WeatherToday
-                apiKey={apiKey}
                 city={city}
               />
-            </Route>
-            <Route exact path={`/weather-five-days/${city}`}>
+            }/>
+            <Route path={`/weather-five-days/:city`} element={
               <WeatherFiveDays
-                apiKey={apiKey}
                 city={city}
               />
-            </Route>
-          </Switch>
-        </BrowserRouter>
+            }/>
+          </Routes>
       </div>
     </>
   )

@@ -3,19 +3,23 @@ import './weather-today.css'
 import EveryComponentsProps from "../../models/every-components-props";
 import TodayDataResponse from "../../models/today-data-response";
 
+const apiKey = 'e316f8024bffa51bf25f2009765e67b5';
 
-export const WeatherToday = ({city, apiKey}: EveryComponentsProps) => {
+const getTodayAPI = (city: string) =>
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+
+export const WeatherToday: React.FC<EveryComponentsProps> = ({city}) => {
   const [isLoading, setIsLoading] = useState(true)
   const [dayData, setDayData] = useState(null as TodayDataResponse | null)
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
-      .then(response => response.json())
-      .then((data) => {
-        setDayData(data)
-        setIsLoading(false)
-      });
-  }, []);
+      getTodayAPI(city)
+        .then(response => response.json())
+        .then((data) => {
+          setDayData(data)
+          setIsLoading(false)
+        });
+  }, [city]);
 
   return (
     <>
